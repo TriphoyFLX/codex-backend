@@ -461,3 +461,15 @@ model AiMessage {
 
   @@index([chat_id])
 }
+
+// 12. EMAIL VERIFICATION
+model EmailVerification {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  code      String
+  expires_at DateTime
+  created_at DateTime @default(now())
+
+  @@index([email])
+  @@index([expires_at])
+}

@@ -17,6 +17,7 @@ import aiRoutes from './routes/ai';
 import searchRoutes from './routes/search';
 import uploadRoutes from './routes/upload';
 import adminRoutes from './routes/admin';
+import verificationRoutes from './routes/verification';
 import path from 'path';
 
 dotenv.config();
@@ -47,6 +48,7 @@ app.use('/api/leaderboard', leaderboardRoutes);
 app.use('/api/ai', aiRoutes);
 app.use('/api/search', searchRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/verification', verificationRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

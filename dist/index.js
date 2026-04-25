@@ -21,6 +21,7 @@ const ai_1 = __importDefault(require("./routes/ai"));
 const search_1 = __importDefault(require("./routes/search"));
 const upload_1 = __importDefault(require("./routes/upload"));
 const admin_1 = __importDefault(require("./routes/admin"));
+const verification_1 = __importDefault(require("./routes/verification"));
 const path_1 = __importDefault(require("path"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
@@ -46,6 +47,7 @@ app.use('/api/leaderboard', leaderboard_1.default);
 app.use('/api/ai', ai_1.default);
 app.use('/api/search', search_1.default);
 app.use('/api/admin', admin_1.default);
+app.use('/api/verification', verification_1.default);
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
